@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIZ NATAL</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;  
+      }
+      h1 {
+        margin-bottom: 50px;
+      }
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;    
+      }
+      #sim {
+        background-color: #28a745;
+        color: white;
+      }
+      #sim:hover {
+        background-color: #45a049;
+        transform:scale(1.1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+
+      }
+
+      #nao {
+        background-color: #dc3545;
+        position: absolute;
+      }
+    </style>
+</head>
+<body>
+  <h1>ME EMPRESTA DINHEIRO?</h1>
+  <button id="sim">Sim</button>
+  <button id="nao">Não</button>
+
+  <script>
+    const naoButton = document.getElementById('nao');
+
+    naoButton.addEventListener('mouseover',()=> {
+      const randomX = Math.random() * (window.innerWidth - naoButton.offsetWidth);
+      const randomY = Math.random() * (window.innerHeight - naoButton.offsetHeight);
+
+      naoButton.style.left = `${randomX}px`;
+      naoButton.style.top = `${randomY}px`;
+    });
+  </script>
+
+  <script>
+    document.getElementById("sim").addEventListener("click", function() {
+        window.location.href = "https://www.youtube.com/watch?v=2njVcg-O9Bg";
+    });
+  </script>
+</body>
+</html>
